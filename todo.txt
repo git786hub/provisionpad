@@ -1,0 +1,22 @@
+sudo su
+cd 
+yum install python-pip
+pip install .
+aws configure    ( enter region as well where u want to create ec2 instance )
+git clone https://github.com/amirzed/provisionpad
+cd provisionpad
+pip install .
+propad initiate
+ ( enter aws key, access id, name, ami )
+propad create
+
+(  this will create ec2 instance )
+
+if u want to ssh into instance 
+cd 
+cd .provisionpad/
+
+ssh ec2-user@54.149.28.126 -i ec2_keypair_TESTWXC_us-west-2.pem
+
+( ec2_keypair_TESTWXC_us-west-2.pem this key u will find there only )
+
